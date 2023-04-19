@@ -1745,6 +1745,16 @@ namespace LiveSplit.View
                    && runGrid.Columns[info.ColumnIndex] is DataGridViewImageColumn
                    && info.Type == DataGridViewHitTestType.Cell;
         }
+
+        private void goalGenToolStripMenuItem_Click( object sender, EventArgs e ) {
+
+            //REFERENCE CODE -- SOURCE: LayoutEditorDialog.cs
+            // var settingsDialog = new LayoutSettingsDialog( Layout.Settings, Layout, tabControl );
+            // var result = settingsDialog.ShowDialog( this );
+
+            var goalGenDialog = new RunGoalGenDialog( Run );
+            var result = goalGenDialog.ShowDialog( this );
+        }
     }
 
     public class CustomAutoCompleteComboBox : ComboBox

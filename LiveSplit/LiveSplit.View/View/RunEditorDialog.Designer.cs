@@ -80,6 +80,7 @@
             this.clearHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearTimesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cleanSumOfBestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goalGenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iRunBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iSegmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.runGrid)).BeginInit();
@@ -672,9 +673,10 @@
             this.OtherMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clearHistoryToolStripMenuItem,
             this.clearTimesToolStripMenuItem,
-            this.cleanSumOfBestToolStripMenuItem});
+            this.cleanSumOfBestToolStripMenuItem,
+            this.goalGenToolStripMenuItem});
             this.OtherMenu.Name = "OtherMenu";
-            this.OtherMenu.Size = new System.Drawing.Size(171, 70);
+            this.OtherMenu.Size = new System.Drawing.Size(171, 92);
             // 
             // clearHistoryToolStripMenuItem
             // 
@@ -696,6 +698,13 @@
             this.cleanSumOfBestToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.cleanSumOfBestToolStripMenuItem.Text = "Clean Sum of Best";
             this.cleanSumOfBestToolStripMenuItem.Click += new System.EventHandler(this.cleanSumOfBestToolStripMenuItem_Click);
+            // 
+            // goalGenToolStripMenuItem
+            // 
+            this.goalGenToolStripMenuItem.Name = "goalGenToolStripMenuItem";
+            this.goalGenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.goalGenToolStripMenuItem.Text = "Goal Generator";
+            this.goalGenToolStripMenuItem.Click += new System.EventHandler(this.goalGenToolStripMenuItem_Click);
             // 
             // iRunBindingSource
             // 
@@ -788,5 +797,6 @@
         private System.Windows.Forms.FlowLayoutPanel flpnlLayoutSelect;
         private System.Windows.Forms.ComboBox cbxLayoutToUse;
         private System.Windows.Forms.Button btnBrowseLayout;
+        private System.Windows.Forms.ToolStripMenuItem goalGenToolStripMenuItem;
     }
 }
