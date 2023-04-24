@@ -1747,13 +1747,17 @@ namespace LiveSplit.View
         }
 
         private void goalGenToolStripMenuItem_Click( object sender, EventArgs e ) {
+            if( Run.AttemptHistory.Count == 0 ) {
+                MessageBox.Show( "Past split data required to generate goal", "No Run History found", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                return;
+            }
 
-            //REFERENCE CODE -- SOURCE: LayoutEditorDialog.cs
-            // var settingsDialog = new LayoutSettingsDialog( Layout.Settings, Layout, tabControl );
-            // var result = settingsDialog.ShowDialog( this );
+            var goalGenDialog = new RunGoalGenDialog( CurrentState );
+            var results = goalGenDialog.ShowDialog( this );
 
-            var goalGenDialog = new RunGoalGenDialog( Run );
-            var result = goalGenDialog.ShowDialog( this );
+            if( results == DialogResult.OK ) {
+                AddComparisonColumn( "Goal" );
+            }
         }
     }
 
